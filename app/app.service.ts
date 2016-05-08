@@ -53,7 +53,7 @@ export class AppService {
         id: 6,
         icon: 'reddit-square',
         type: 'reddit',
-        prefix: 'reddit.com/u/',
+        prefix: '/u/',
         suffix: '',
         url: 'https://www.reddit.com/u/gislikonrad'
       }
