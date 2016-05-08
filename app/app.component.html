@@ -1,0 +1,20 @@
+<div class="container">
+  <a [href]="selected.url" target="_blank" class="row">
+    <div class="col-sm-4 text-right">{{selected.prefix}}</div>
+    <div class="col-sm-4">gislikonrad</div>
+    <div class="col-sm-4">{{selected.suffix}}</div>
+  </a>
+  <div class="row">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4 icons">
+      <a *ngFor="#info of list"
+         [href]="info.url"
+         (mouseover)="hover(info.id)"
+         (mouseleave)="active = true"
+         [class.selected]="info.id == selected.id"
+         target="_blank">
+          <i class="fa fa-{{info.icon}}" aria-hidden="true"></i>
+      </a>
+    </div>
+  </div>
+</div>
