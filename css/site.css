@@ -10,7 +10,7 @@ html, body {
 }
 
 .container {
-  padding-top: 20em;
+  padding-top: 10em;
 }
 
 a, a:hover, a:active, a:focus {
@@ -19,6 +19,10 @@ a, a:hover, a:active, a:focus {
   -moz-text-shadow: 0 0 20px #ff8;
   -webkit-text-shadow: 0 0 20px #ff8;
   text-shadow: 0px 0px 20px #ff8;
+}
+
+.icons {
+  text-align:center;
 }
 
 .icons a {
@@ -35,14 +39,110 @@ a, a:hover, a:active, a:focus {
   text-shadow: none;
 }
 
+a div.col-sm-4 {
+  text-align: center;
+}
 
 a div.col-sm-4:first-child,
 a div.col-sm-4:last-child {
-  font-size: 2.5em;
-  line-height: 2.3em;
+  font-size: 2.0em;
+  line-height: 1.9em;
+  height: 1.9em;
 }
 a div.col-sm-4 {
-    font-size: 5.25em;
-    line-height: 1em;
     padding:0;
+    font-size: 3.25em;
+    line-height: 1em;
+}
+
+
+@media (min-width: 768px) {
+
+  .container {
+    padding-top: 14em;
+  }
+
+  .icons {
+    text-align:right;
+  }
+
+  a div.col-sm-4:first-child {
+    text-align: right;
+  }
+  a div.col-sm-4:last-child {
+    text-align: left;
+  }
+
+  a div.col-sm-4:after {
+    content: "";
+  }
+
+  a div.col-sm-4:first-child,
+  a div.col-sm-4:last-child {
+    font-size: 2.0em;
+    line-height: 1.9em;
+    height: 1.9em;
+  }
+  a div.col-sm-4 {
+  font-size: 3.25em;
+  line-height: 1em;
+  }
+}
+
+@media (min-width: 992px) {
+
+  .container {
+    padding-top: 16em;
+  }
+
+  .icons a {
+    text-align:right;
+  }
+
+  a div.col-sm-4:first-child {
+    text-align: right;
+  }
+  a div.col-sm-4:last-child {
+    text-align: left;
+  }
+
+  a div.col-sm-4:first-child,
+  a div.col-sm-4:last-child {
+    font-size: 2.5em;
+    line-height: 1.8em;
+    height: 1.8em;
+  }
+  a div.col-sm-4 {
+      font-size: 4.25em;
+      line-height: 1em;
+  }
+}
+
+@media (min-width: 1200px) {
+
+  .container {
+    padding-top: 20em;
+  }
+
+  .icons a {
+    text-align:right;
+  }
+
+  a div.col-sm-4:first-child {
+    text-align: right;
+  }
+  a div.col-sm-4:last-child {
+    text-align: left;
+  }
+
+  a div.col-sm-4:first-child,
+  a div.col-sm-4:last-child {
+    font-size: 2.5em;
+    line-height: 2.3em;
+    height: 2.3em;
+  }
+  a div.col-sm-4 {
+      font-size: 5.25em;
+      line-height: 1em;
+  }
 }
