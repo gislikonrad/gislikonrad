@@ -29,8 +29,13 @@ a, a:hover, a:active, a:focus {
   font-size:2em;
 }
 
-.icons a:after {
-  content: " ";
+.icons a {
+  padding-top: 5px;
+  padding-right: 5px;
+}
+
+.icons a:last-child {
+  padding-right: 0;
 }
 
 .icons a:not(.selected) {
@@ -54,7 +59,20 @@ a div.col-sm-4 {
     font-size: 3.25em;
     line-height: 1em;
 }
+.progress {
+  height: 1px;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none;
+}
 
+.progress-bar {
+  -webkit-transition: none;
+  -o-transition: none;
+  transition: none;
+  background-color: #000;
+}
 
 @media (min-width: 768px) {
 

@@ -10,14 +10,36 @@ export class AppComponent {
   constructor(public service: AppService) {
     this.list = service.getContactInfo();
     this.selected = this.list[0];
-    this.active = true;
+    this.play = false;
+    this.timer = 0;
+    this.intervalId = 0;
+    this.interval = 100;
+    this.totalTime = 5000;
 
-    setInterval(() =>
-    {
-      if(this.active) {
-        this.selected = this.getNext();
-      }
-    }, 5000);
+    this.togglePlayback();
+  }
+
+  togglePlayback() {
+    if(this.intervalId) {
+      clearInterval(this.intervalId);
+      this.intervalId = 0;
+    }
+    else {
+      this.intervalId = setInterval(() =>
+      {
+        this.timer += this.interval;
+        if(this.timer >= this.totalTime) {
+          this.selected = this.getNext();
+          this.timer = 0;
+        }
+      }, this.interval);
+    }
+
+    this.play = !this.play;
+  }
+
+  getTimerPercentage() {
+    return Math.round((this.timer / this.totalTime) * 100);
   }
 
   getNext() {
@@ -25,9 +47,21 @@ export class AppComponent {
     return this.get(id);
   }
 
-  hover(id) {
-    this.active = false;
+  mouseover(id) {
+    if(!this.hover && this.play) {
+      this.togglePlayback();
+      this.play = true;
+    }
+    this.hover = true;
     this.selected = this.get(id);
+  }
+
+  mouseleave() {
+    if(this.play) {
+      this.togglePlayback();
+      this.play = true;
+    }
+    this.hover = false;
   }
 
   get(id) {
