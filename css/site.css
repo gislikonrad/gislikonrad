@@ -13,6 +13,10 @@ html, body {
   padding-top: 10em;
 }
 
+.row {
+  margin: 0px;
+}
+
 a, a:hover, a:active, a:focus {
   text-decoration: none;
   color:#000;
@@ -22,7 +26,21 @@ a, a:hover, a:active, a:focus {
 }
 
 .icons {
-  text-align:center;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.icons .icon {
+  flex-basis: 30px;
+  text-align: left;
+}
+
+.icons .icon.playback {
+  order: 99;
+  flex-grow: 10;
+  align-self: flex-end;
+  text-align: right;
 }
 
 .icons a {
@@ -31,11 +49,6 @@ a, a:hover, a:active, a:focus {
 
 .icons a {
   padding-top: 5px;
-  padding-right: 5px;
-}
-
-.icons a:last-child {
-  padding-right: 0;
 }
 
 .icons a:not(.selected) {
@@ -44,8 +57,8 @@ a, a:hover, a:active, a:focus {
   text-shadow: none;
 }
 
-a div.col-sm-4 {
-  text-align: center;
+.col-sm-4 {
+  padding:0;
 }
 
 a div.col-sm-4:first-child,
@@ -55,7 +68,7 @@ a div.col-sm-4:last-child {
   height: 1.9em;
 }
 a div.col-sm-4 {
-    padding:0;
+    text-align: center;
     font-size: 3.25em;
     line-height: 1em;
 }
@@ -75,7 +88,6 @@ a div.col-sm-4 {
 }
 
 @media (min-width: 768px) {
-
   .container {
     padding-top: 14em;
   }
@@ -91,10 +103,6 @@ a div.col-sm-4 {
     text-align: left;
   }
 
-  a div.col-sm-4:after {
-    content: "";
-  }
-
   a div.col-sm-4:first-child,
   a div.col-sm-4:last-child {
     font-size: 2.0em;
@@ -108,20 +116,12 @@ a div.col-sm-4 {
 }
 
 @media (min-width: 992px) {
-
   .container {
     padding-top: 16em;
   }
 
   .icons a {
     text-align:right;
-  }
-
-  a div.col-sm-4:first-child {
-    text-align: right;
-  }
-  a div.col-sm-4:last-child {
-    text-align: left;
   }
 
   a div.col-sm-4:first-child,
@@ -137,20 +137,12 @@ a div.col-sm-4 {
 }
 
 @media (min-width: 1200px) {
-
   .container {
     padding-top: 20em;
   }
 
   .icons a {
     text-align:right;
-  }
-
-  a div.col-sm-4:first-child {
-    text-align: right;
-  }
-  a div.col-sm-4:last-child {
-    text-align: left;
   }
 
   a div.col-sm-4:first-child,

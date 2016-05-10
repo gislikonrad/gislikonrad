@@ -8,7 +8,7 @@
     <div class="col-sm-4"></div>
     <div class="col-sm-4 icons">
       <a *ngFor="#info of list"
-         class="pull-left"
+         class="icon"
          [href]="info.url"
          (mouseover)="mouseover(info.id)"
          (mouseleave)="mouseleave()"
@@ -16,7 +16,7 @@
          target="_blank">
           <i class="fa fa-{{info.icon}}" aria-hidden="true"></i>
       </a>
-      <a href="#" class="pull-right" (click)="togglePlaybackHandler($event)">
+      <a href="#" class="icon playback" (click)="togglePlaybackHandler($event)">
         <i class="fa fa-play" aria-hidden="true" *ngIf="!play"></i>
         <i class="fa fa-pause" aria-hidden="true" *ngIf="play"></i>
       </a>

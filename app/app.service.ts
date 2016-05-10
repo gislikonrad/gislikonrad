@@ -33,8 +33,16 @@ export class AppService {
         suffix: '',
         url: 'https://github.com/gislikonrad'
       },
+      // {
+      //   id: 4,
+      //   icon: 'stack-overflow'
+      //   type: 'stackoverflow',
+      //   prefix: 'stackoverflow.com/users/411122/',
+      //   suffix: '',
+      //   url: 'http://stackoverflow.com/users/411122/gislikonrad'
+      // },
       {
-        id: 4,
+        id: 5,
         icon: 'linkedin-square',
         type: 'linkedin',
         prefix: 'linkedin.com/in/',
@@ -42,7 +50,7 @@ export class AppService {
         url: 'https://linkedin.com/in/gislikonrad'
       },
       {
-        id: 5,
+        id: 6,
         icon: 'facebook-square',
         type: 'facebook',
         prefix: 'facebook.com/',
@@ -50,7 +58,7 @@ export class AppService {
         url: 'https://www.facebook.com/gislikonrad'
       },
       {
-        id: 6,
+        id: 7,
         icon: 'reddit-square',
         type: 'reddit',
         prefix: '/u/',
@@ -58,13 +66,21 @@ export class AppService {
         url: 'https://www.reddit.com/u/gislikonrad'
       },
       {
-        id: 7,
+        id: 8,
         icon: 'instagram',
         type: 'instagram',
-        prefix: 'www.instagram.com/',
+        prefix: 'instagram.com/',
         suffix: '',
         url: 'https://www.instagram.com/gislikonrad'
-      }
+      },
+      // {
+      //   id:9,
+      //   icon: 'steam-square',
+      //   type: 'steam',
+      //   prefix: 'steamcommunity.com/id/',
+      //   suffix: '',
+      //   url: 'http://steamcommunity.com/id/gislikonrad'
+      // }
     ];
   }
 
