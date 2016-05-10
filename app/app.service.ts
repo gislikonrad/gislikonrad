@@ -56,6 +56,14 @@ export class AppService {
         prefix: '/u/',
         suffix: '',
         url: 'https://www.reddit.com/u/gislikonrad'
+      },
+      {
+        id: 7,
+        icon: 'instagram',
+        type: 'instagram',
+        prefix: 'www.instagram.com/',
+        suffix: '',
+        url: 'https://www.instagram.com/gislikonrad'
       }
     ];
   }

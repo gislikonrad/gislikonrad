@@ -16,7 +16,7 @@
          target="_blank">
           <i class="fa fa-{{info.icon}}" aria-hidden="true"></i>
       </a>
-      <a href="#" class="pull-right" (click)="togglePlayback()">
+      <a href="#" class="pull-right" (click)="togglePlaybackHandler($event)">
         <i class="fa fa-play" aria-hidden="true" *ngIf="!play"></i>
         <i class="fa fa-pause" aria-hidden="true" *ngIf="play"></i>
       </a>

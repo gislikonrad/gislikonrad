@@ -19,6 +19,10 @@ export class AppComponent {
     this.togglePlayback();
   }
 
+  togglePlaybackHandler($event) {
+    $event.preventDefault();
+    this.togglePlayback();
+  }
   togglePlayback() {
     if(this.intervalId) {
       clearInterval(this.intervalId);
@@ -28,7 +32,7 @@ export class AppComponent {
       this.intervalId = setInterval(() =>
       {
         this.timer += this.interval;
-        if(this.timer >= this.totalTime) {
+        if(this.timer > this.totalTime) {
           this.selected = this.getNext();
           this.timer = 0;
         }
