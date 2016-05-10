@@ -61,6 +61,11 @@ a, a:hover, a:active, a:focus {
   padding:0;
 }
 
+a div.col-sm-4:first-child {
+  /*width: 83.33333333%;
+  margin-left: -50%;*/
+  /*direction: rtl;*/
+}
 a div.col-sm-4:first-child,
 a div.col-sm-4:last-child {
   font-size: 2.0em;

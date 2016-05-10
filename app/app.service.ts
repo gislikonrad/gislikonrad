@@ -2,7 +2,6 @@ export class AppService {
   getContactInfo() {
     return [
       {
-        id: 0,
         icon: 'globe',
         type: 'website',
         prefix: 'www.',
@@ -10,7 +9,6 @@ export class AppService {
         url: 'http://www.gislikonrad.com'
       },
       {
-        id: 1,
         icon: 'envelope-square',
         type: 'email',
         prefix: '',
@@ -18,7 +16,6 @@ export class AppService {
         url: 'mailto:gislikonrad@gmail.com'
       },
       {
-        id: 2,
         icon: 'twitter-square',
         type: 'twitter',
         prefix: '@',
@@ -26,7 +23,6 @@ export class AppService {
         url: 'https://twitter.com/gislikonrad'
       },
       {
-        id: 3,
         icon: 'github-square'
         type: 'github',
         prefix: 'github.com/',
@@ -34,7 +30,6 @@ export class AppService {
         url: 'https://github.com/gislikonrad'
       },
       // {
-      //   id: 4,
       //   icon: 'stack-overflow'
       //   type: 'stackoverflow',
       //   prefix: 'stackoverflow.com/users/411122/',
@@ -42,7 +37,6 @@ export class AppService {
       //   url: 'http://stackoverflow.com/users/411122/gislikonrad'
       // },
       {
-        id: 5,
         icon: 'linkedin-square',
         type: 'linkedin',
         prefix: 'linkedin.com/in/',
@@ -50,7 +44,6 @@ export class AppService {
         url: 'https://linkedin.com/in/gislikonrad'
       },
       {
-        id: 6,
         icon: 'facebook-square',
         type: 'facebook',
         prefix: 'facebook.com/',
@@ -58,7 +51,6 @@ export class AppService {
         url: 'https://www.facebook.com/gislikonrad'
       },
       {
-        id: 7,
         icon: 'reddit-square',
         type: 'reddit',
         prefix: '/u/',
@@ -66,7 +58,6 @@ export class AppService {
         url: 'https://www.reddit.com/u/gislikonrad'
       },
       {
-        id: 8,
         icon: 'instagram',
         type: 'instagram',
         prefix: 'instagram.com/',
@@ -74,7 +65,6 @@ export class AppService {
         url: 'https://www.instagram.com/gislikonrad'
       },
       // {
-      //   id:9,
       //   icon: 'steam-square',
       //   type: 'steam',
       //   prefix: 'steamcommunity.com/id/',

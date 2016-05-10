@@ -9,6 +9,7 @@ import { AppService } from './app.service';
 export class AppComponent {
   constructor(public service: AppService) {
     this.list = service.getContactInfo();
+    this.index = 0;
     this.selected = this.list[0];
     this.play = false;
     this.timer = 0;
@@ -47,17 +48,17 @@ export class AppComponent {
   }
 
   getNext() {
-    let id = this.selected.id + 1;
+    let id = this.index + 1;
     return this.get(id);
   }
 
-  mouseover(id) {
+  mouseover(index) {
     if(!this.hover && this.play) {
       this.togglePlayback();
       this.play = true;
     }
     this.hover = true;
-    this.selected = this.get(id);
+    this.selected = this.get(index);
   }
 
   mouseleave() {
@@ -68,17 +69,12 @@ export class AppComponent {
     this.hover = false;
   }
 
-  get(id) {
-    let selected = null;
-    for(let i = 0; i < this.list.length; i++) {
-      if(this.list[i].id === id) {
-        selected = this.list[i];
-        break;
-      }
+  get(index) {
+    if(this.list[index]) {
+      this.index = index;
+      return this.list[index];
     }
-    if(selected === null) {
-      selected = this.list[0];
-    }
-    return selected;
+    this.index = 0;
+    return this.list[0];
   }
 }

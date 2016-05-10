@@ -7,12 +7,12 @@
   <div class="row">
     <div class="col-sm-4"></div>
     <div class="col-sm-4 icons">
-      <a *ngFor="#info of list"
+      <a *ngFor="#info of list; #i=index"
          class="icon"
          [href]="info.url"
-         (mouseover)="mouseover(info.id)"
+         (mouseover)="mouseover(i)"
          (mouseleave)="mouseleave()"
-         [class.selected]="info.id == selected.id"
+         [class.selected]="list.indexOf(info) == index"
          target="_blank">
           <i class="fa fa-{{info.icon}}" aria-hidden="true"></i>
       </a>
@@ -32,5 +32,4 @@
       </div>
     </div>
   </div>
-
 </div>
