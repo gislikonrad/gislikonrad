@@ -1,0 +1,35 @@
+<div class="container">
+  <a [href]="selected.url" target="_blank" class="row">
+    <div class="col-sm-4 text-right">{{selected.prefix}}</div>
+    <div class="col-sm-4">gislikonrad</div>
+    <div class="col-sm-4">{{selected.suffix}}</div>
+  </a>
+  <div class="row">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4 icons">
+      <a *ngFor="let info of list; let i=index"
+         class="icon"
+         [href]="info.url"
+         (mouseover)="mouseover(i)"
+         (mouseleave)="mouseleave()"
+         [class.selected]="list.indexOf(info) == index"
+         target="_blank">
+          <i class="fa fa-{{info.icon}}" aria-hidden="true"></i>
+      </a>
+      <a href="#" class="icon playback" (click)="togglePlaybackHandler($event)">
+        <i class="fa fa-play" aria-hidden="true" *ngIf="!play"></i>
+        <i class="fa fa-pause" aria-hidden="true" *ngIf="play"></i>
+      </a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4">
+      <div class="progress">
+        <div class="progress-bar" role="progressbar" [style.width]="getTimerPercentage() + '%'">
+          <span class="sr-only">{{getTimerPercentage()}}% Complete</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -23,7 +23,7 @@ export class AppService {
         url: 'https://twitter.com/gislikonrad'
       },
       {
-        icon: 'github-square'
+        icon: 'github-square',
         type: 'github',
         prefix: 'github.com/',
         suffix: '',
@@ -63,7 +63,7 @@ export class AppService {
         prefix: 'instagram.com/',
         suffix: '',
         url: 'https://www.instagram.com/gislikonrad'
-      },
+      }
       // {
       //   icon: 'steam-square',
       //   type: 'steam',
