@@ -10,7 +10,7 @@ export class AppComponent {
   list: any[];
   selected: any;
   index: number;
-  private play: boolean;
+  play: boolean;
   private hover: boolean;
   private timer: number;
   private intervalId: any;
