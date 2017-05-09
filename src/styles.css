@@ -1,5 +1,6 @@
+/* You can add global styles to this file, and also import other style files */
 html, body {
-
+  height:100%;
   background: #ffaa00; /* Old browsers */
   background: -moz-radial-gradient(center, ellipse cover, #ffaa00 1%, #ff8800 100%); /* FF3.6-15 */
   background: -webkit-radial-gradient(center, ellipse cover, #ffaa00 1%,#ff8800 100%); /* Chrome10-25,Safari5.1-6 */

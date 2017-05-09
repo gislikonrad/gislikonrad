@@ -1,12 +1,22 @@
-import { Component } from 'angular2/core';
+import { Component } from '@angular/core';
 import { AppService } from './app.service';
 
 @Component({
-  selector: 'my-app',
-  templateUrl: './app/app.component.html',
-    bindings: [AppService]
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  list: any[];
+  selected: any;
+  index: number;
+  play: boolean;
+  private hover: boolean;
+  private timer: number;
+  private intervalId: any;
+  private interval: number;
+  private totalTime: number;
+
   constructor(public service: AppService) {
     this.list = service.getContactInfo();
     this.index = 0;
