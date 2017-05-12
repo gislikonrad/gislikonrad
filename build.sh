@@ -1,3 +1,4 @@
 #!/bin/bash
-bin="$(npm bin)"
-"$bin/ng build --prod"
+bin=$(npm bin)
+file $bin/ng
+$bin/ng build --prod
